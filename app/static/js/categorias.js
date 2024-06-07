@@ -1,5 +1,5 @@
-//Como ven consumi una api direcatamente usando este código. Hací el front no se carga desde el back
-//A su vez si la conexión es exitosa crea elementos li en el contenedor de categorias, osea crea una lista con los 
+//Como ven consumi una api direcatamente usando este código. así el front no se carga desde el back
+//A su vez si la conexión es exitosa crea elementos "li" en el contenedor de categorias, osea crea una lista con las categorias
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
     fetchCategorias();
