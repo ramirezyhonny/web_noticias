@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+main {
+    flex: 1;
+    display: flex;
+}
+button, input[type=submit]{
+    cursor: pointer;
+}
+#navbar{
+    width: 100%;
+    height: 100px;
+}
+.navbar_list{
+    list-style: none;
+    display: flex;
+    
+}
+#container{
+    height: calc(100vh - 100px);
+    width: 100%;
+}

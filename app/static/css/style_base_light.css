@@ -1,3 +1,16 @@
-#navbar{
-    background-color: aliceblue;
+:root{
+    --principal-light:rgb(222,222,222);
+    --second-light:rgb(241,241,241);
 }
+
+/*Estilos claros para elementos base*/
+html,body{
+    background-color: var(--principal-light);
+}
+#navbar{
+    background-color: var(--second-light);
+}
+#container{
+    background-color: var(--principal-light);
+}
+/*Estilos para elementos por contenedores*/

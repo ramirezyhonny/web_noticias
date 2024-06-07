@@ -1,3 +1,13 @@
+:root{
+    --principal-dark:rgb(41,52,74);
+    --second-dark:rgb(33,40,58);
+}
+html,body{
+    background-color: var(--principal-dark);
+}
 #navbar{
-    background-color: black;
+    background-color: var(--principal-dark);
+}
+#container{
+    background-color: var(--second-dark);
 }

@@ -4,19 +4,30 @@
 {% endblock %}
 {% block content %}
     <div class="form_login_container">
-        <form action="{{ url_for('auth_bp.login') }}" method="post">
+        <div class="form_container_info">
+            <div class="link_to_signup">
+                <a href="{{ url_for('signup_bp.signup') }}" class="_link_signup">Create an account</a>
+            </div>
+        </div>
+        <form action="{{ url_for('auth_bp.login') }}" method="post" class="form_login">
+            <h2 class="title_form_login">Sign in</h2>
             {{ form.hidden_tag() }}
-            <p>
-                {{ form.email.label }}<br>
-                {{ form.email(size=32) }}<br>
-                {{ form.email.errors }}
-            </p>
-            <p>
-                {{ form.password.label }}<br>
-                {{ form.password(size=32) }}<br>
-                {{ form.password.errors }}
-            </p>
-            <p>{{ form.submit() }}</p>
+            <div class="input_cont_form">
+
+                <input type="email" name="email" id="email" size="32" value required class="input_form">
+                <label for="email" class="label-name">
+                    <span class="content-name">Email</span>
+                </label>
+            </div>
+            <div class="input_cont_form">
+
+                <input type="password" id="password" name="password"  required size="32" class="input_form">
+                <label for="password" class="label-name">
+                    <span class="content-name">Password</span>
+                </label>
+            </div>
+
+            <input type="submit" name="submit" id="submit" value="Iniciar sesión">
         </form>
     </div>
 {% endblock %}
