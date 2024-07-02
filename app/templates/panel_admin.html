@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/style_admin.css') }}">
+{% endblock %}
+{% block content %}
+<h1>Panel de administrador</h1>
+<p>Bienvenido, {{ current_user.username }}. Aquí puedes gestionar la aplicación.</p>
+<div>
+    <div class="admin_menu">
+        <ul>
+            <li><a href="#" onclick="fetchData('usuarios')">Usuarios</a></li>
+            <li><a href="#" onclick="fetchData('noticias')">Noticias</a></li>
+        </ul>
+    </div>
+    <div class="contadores">
+        <div class="count" id="usuario_contador">Usuarios: 0</div>
+        <div class="count" id="noticia_contador">Noticias: 0</div>
+    </div>
+
+    <div id="admin_contenido">
+        <!--Aquí se mostrarán las tablas con sus respectivos datos-->
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/adminPanel.js') }}"></script>
+{% endblock %}

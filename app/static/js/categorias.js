@@ -9,14 +9,14 @@ function fetchCategorias() {
     console.log('Fetching categories...');
     fetch('/listadoCategorias')
         .then(response => {
-            console.log('Response received:', response);
+            console.log('Respuesta recibida:', response);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
             return response.json();
         })
         .then(data => {
-            console.log('Data received:', data);
+            console.log('Datos recibidos:', data);
             const categoriaList = document.getElementById('categoria_list');
             categoriaList.innerHTML = '';
             data.forEach(categoria => {
@@ -26,6 +26,6 @@ function fetchCategorias() {
             });
         })
         .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
+            console.error('Problemas con la operación fetch', error);
         });
 }
