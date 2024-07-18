@@ -9,6 +9,9 @@ from flask_bcrypt import Bcrypt
 from config import Config
 from flask_login import LoginManager
 from models.user import User
+import os
+from dotenv import load_dotenv
+load_dotenv()
 db = SQLAlchemy()
 migrate = Migrate()
 ckeditor=CKEditor()

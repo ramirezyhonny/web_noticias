@@ -10,5 +10,11 @@ DB_CREDENTIALS = {
     "port": getenv("MYSQL_PORT"),
     "database": getenv("MYSQL_DATABASE"),
 }
-DB_URL = URL.create(**DB_CREDENTIALS)
-ENGINE = create_engine(DB_URL)
+
+print("DB Credentials:", DB_CREDENTIALS)  # Depuración
+
+try:
+    DB_URL = URL.create(**DB_CREDENTIALS)
+    ENGINE = create_engine(DB_URL)
+except Exception as e:
+    print("Error creating engine:", e)  # Depuración
